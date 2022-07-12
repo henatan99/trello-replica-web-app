@@ -1,0 +1,59 @@
+main {
+    width: calc(100% - 40px);
+    margin-top: 44px;
+    margin-left: 40px;
+}
+
+/* Boarder Top Strip */
+
+.boardpage_top_strip {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #f4f5f7;
+    padding: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.boardpage_top_strip > div {
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boardpage_top_strip > span {
+    color: #42526e;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 8px;
+}
+
+.board_earthicon {
+    width: 16px;
+    height: 16px;
+    padding-right: 10px;
+}
+
+.board_message {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #172b4d;
+}
+
+.board_knowmore {
+    font-size: 14px;
+    color: #6b778c;
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 0 0 0 10px;
+}
+
+

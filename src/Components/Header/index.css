@@ -1,0 +1,150 @@
+.topbar {
+    background-color: #004269;
+    height: 44px;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar_leftmenu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.button_buttonwrapper {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.button_darkbutton {
+    width: -webkit-max-content;
+    width: max-content;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.24);
+    padding: 0 12px;
+    margin-left: 12px;
+}
+
+.topbar_menuitem {
+    padding: 0 12px;
+    border-radius: 3px;
+    color: #fff;
+    height: 32px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.topbar_menuitem:first-of-type {
+    padding: 0 8px;
+}
+
+.button_icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 2px;
+    padding-right: 8px;
+}
+
+.topbar_logo {
+    background-image: url(data:image/gif;base64,R0lGODlhOAFAAPABAAAAAP///yH5BAUAAAAAIf8LSW1hZ2VNYWdpY2sNZ2FtbWE9MC40NTQ1NQAsAAAAADgBQAAAAv6EH6nL7Q/dmbTai7PevPsPYpHSjUGIpojJtu6pxvJM1x5bjvY+vf4v4QmHxCKOYyrSgMym8gmNIpPTiBTVzAKv3K7yuKF6q9qyOGb2jddgzXktSssfy3kbLr3HrfiM/U8yA6jTd6V38VbYM2hXxxikCHVokRgJ8DjniLlgKVlJSdi5slmmSQojSjRZ8al4Wir4mpBq1Eph24c7CukWiiaLSsuzeusratzb8IGMBSw8RLzIR8u8x7A8/Sv7LBS9Sydcjcgblq0CHMxtCl5u3ikOqnzj3rwdPlvjbaCbwtlPb81fDgiG9LGqJi9EC20ADzZUuHAgOzICKSb0xM+huf6JFg1qJNjxmgwmIQNJrNiO4xeP0rKBLBkRG7yWKmU68fPwo0mY6VZmLBYq5zeSNl8mMwoiDU6kR1E2vfgkZlFwM/fJmVfVqtBxV+PVDLgzJTmfWXVK0PXn5FezIpOmZRv2KT61bTGWBWoF1yCec+XWpasU79ilf/3GrfWT5k2ubw07ZbwWciPBUP1OLYz4rmKiXgGJjbwZM9jGWkFT7vtZNDSWQzmfnvYidWXJs0eT1mw69GFVrEtnof1Vaufcl+6e0o3aMlbi65gjjw1XtW/QBn9Cf80O92Dbu1cnbr0levfnPbE/Hl5b/PnpL7WnR7++W+/i1x2PJ18evHTygP7fs6e6FXiXxTfMfPXJtp9+8VVXFoNUuOefgsllFqB5CVqYH3zSOciUhhf+JxKEnuVhIGseEcNhbiwdISJpUZWoGYj3YZghfQHyYyIhLU4WhXD9EejhhMDtl+J2GEKkw46ZkPidjDOq9yOBRUZoo3NOzqJkVz3CWKGEu/1gn5BQIvgkjVVS6aUWBTV5ppHcuRikmEeGWeOQnGQZ2JZs9vYKmWWi1SQOeJqxZoxX1hlnnoR1GKefctpJwqCw6Glom2jip2aUj3rpKKLqnSBpppR2mSaSey3H6JhhmkpQqL8xWSmfI7rVYFaBJuHqYnaReiir5PD6qaZ8+XpWl5gUCv6srMD+U+tWOfKR0SbIprqolZZ+GEuz1JaKKoDogAlrsrdWWs+Ntp744LfgjrotpJsmyq6b/PHl6bUhqqtGuO3CS6y8zaGpj4+fooJvvvH6yy+tbFrVqacC0yinC2kWXOa/l+LH7IpArjvwegceahLFEutrrb0VQ1xZVeF13N1xE4s8bcnzgfxqtZNwzLKuIj/sXawLm0wonbXhjLKuQO9cr8XYYnzOI/SqZrC7Nb9MccwIB8sQnIlC/XHOHyP9c78Xc5v1kg2P17XXN4NdctN7hk112jnbvO/RcrPddsbikqu2dSO/ia2iUuPbBc90L3224Vs3rPDKibtcOJd1Dx4YNeVAXlnu3+pszrnQJ6em97uAf9556aafXosKBQAAOw==);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 9px;
+    width: 75px;
+    height: 15px;
+    padding: 8px 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.topbar_arrowdown {
+    width: 10px;
+    margin-left: 6px;
+}
+
+.button_label {
+    font-size: 14px;
+}
+
+/* right menu */
+
+.topbar_rightmenu {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.topbar_searchwrapper {
+    position: relative;
+    margin-right: 8px;
+}
+
+.topbar_searchwrapper span {
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: hsla(0,0%,100%,.8);
+}
+
+.topbar_searchinput {
+    width: 250px;
+    height: 32px;
+    border: 1px solid hsla(0,0%,100%,.25);
+    border-radius: 3px;
+    background-color: hsla(0,0%,100%,.3);
+    color: hsla(0,0%,100%,.5);
+    padding-left: 30px;
+    outline: none;
+}
+
+.material_icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.user_avatar_default {
+    color: #172b4d;
+    background-color: #dfe1e6;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-left: 4px;
+}

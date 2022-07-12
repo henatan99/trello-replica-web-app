@@ -94,16 +94,3 @@
     padding-left: 30px;
     outline: none;
 }
-
-.user_avatar_default {
-    color: #172b4d;
-    background-color: #dfe1e6;
-    height: 32px;
-    width: 32px;
-    line-height: 32px;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 50%;
-    font-weight: 700;
-    margin-left: 4px;
-}

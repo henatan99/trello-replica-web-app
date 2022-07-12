@@ -1,0 +1,35 @@
+.board_main_container {
+    padding: 4px;
+}
+
+.board_title_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 4px 0 8px;
+}
+
+.board_title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    padding: 0 12px;
+    color: #fff;
+    margin: 0;
+}
+
+.board_star_wrapper {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    background-color: hsla(0,0%,100%,.3);
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.board_separator {
+    width: 1px;
+    height: 16px;
+    background-color: hsla(0,0%,100%,.3);
+    margin: 8px;
+}

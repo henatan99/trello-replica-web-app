@@ -7,6 +7,7 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0079bf;
 }
 
 body,
@@ -39,6 +40,18 @@ option {
   padding-right: 8px;
 }
 
+.button_secondary {
+  width: -webkit-max-content;
+  width: max-content;
+  color: #fff;
+  background-color: hsla(0,0%,100%,.3);
+  padding: 0 12px;
+}
+
+.button_label {
+  font-size: 14px;
+}
+
 .material_icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -53,4 +66,17 @@ option {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+.user_avatar_default {
+  color: #172b4d;
+  background-color: #dfe1e6;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-left: 4px;
 }

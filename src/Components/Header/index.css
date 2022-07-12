@@ -61,10 +61,6 @@
     margin-left: 6px;
 }
 
-.button_label {
-    font-size: 14px;
-}
-
 /* right menu */
 
 .topbar_rightmenu {
@@ -78,7 +74,7 @@
     margin-right: 8px;
 }
 
-.topbar_searchwrapper span {
+.topbar_searchwrapper > span {
     position: absolute;
     left: 5px;
     top: 7px;

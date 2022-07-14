@@ -1,11 +1,11 @@
 import React from "react";
 import CardTask from "./cardTask";
+import { Droppable } from "react-beautiful-dnd";
 
 const BoardCard = (props) => {
-    const { data, title, droppableId, droppableContextId } = props.props;
-    console.log('card props', props);
-    console.log('data', data);
-    console.log('title', title);
+    const { card } = props;
+    const { idx, data, title } = card;
+    const cardIndex = idx;
 
     return (
         <div className="list_card_main_container">
@@ -16,16 +16,33 @@ const BoardCard = (props) => {
                 <span className="material_icons"></span>
             </div>
 
-            <div className="list_card_task_list_wrapper" data-rbd-droppable-id={droppableId} data-rbd-droppable-context-id={droppableContextId}>
-                {
-                    data && data.length > 0 &&  data.map((task) => {
-                        const { idx } = task;
-                        return(
-                            <CardTask props={task} key={idx} />
-                        )
-                    })
-                }
-            </div>
+            <Droppable droppableId={`${cardIndex}`} key={cardIndex}>
+                {(provided, snapshot) => (
+                    <div 
+                    className="list_card_task_list_wrapper" 
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                    // style={{
+                    //     background: snapshot.isDraggingOver
+                    //       ? "lightblue"
+                    //       : "lightgrey",
+                    //     padding: 4,
+                    //     width: 250,
+                    //     minHeight: 500
+                    //   }}
+                    >
+                        {
+                            data && data.length > 0 &&  data.map((task) => {
+                                const { idx } = task;
+                                return(
+                                    <CardTask key={idx} cardIndex={cardIndex} taskIndex={idx} task={task} />
+                                )
+                            })
+                        }
+                        {provided.placeholder}
+                    </div>
+                )}
+            </Droppable>
 
             <div>
                 <div className=" ">

@@ -28,6 +28,11 @@
     cursor: pointer;
 }
 
+.board_star_wrapper > span {
+    padding: 8px 7px;
+    font-size: 18px;
+}
+
 .board_separator {
     width: 1px;
     height: 16px;

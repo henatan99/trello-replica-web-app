@@ -39,6 +39,13 @@
   padding: 0 12px;
 }
 
+.button_secondary .button_icon {
+  top: 0;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+}
+
 .button_label {
   font-size: 14px;
 }

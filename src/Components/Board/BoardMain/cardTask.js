@@ -29,7 +29,7 @@ const CardTask = (props) => {
     task,
   } = props;
 
-  const { message } = task;
+  const { message, title } = task;
 
   return (
     <Draggable
@@ -53,7 +53,14 @@ const CardTask = (props) => {
                         }
                   >
                     <div className="task_card_main_content">
-                      <div className="task_card_task_label_wrapper" title="" />
+                      {
+                        title && (title === 'CP' || title === 'Fault') && 
+                        <div 
+                            className="task_card_task_label_wrapper" 
+                            style={title === 'CP' ? {backgroundColor: `rgb(0, 121, 191)`} : null} 
+                            title={title} 
+                        />
+                      }
                       <h3 className="task_card_message">
                         {message}
                       </h3>

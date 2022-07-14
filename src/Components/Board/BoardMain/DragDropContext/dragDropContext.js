@@ -19,8 +19,8 @@ const MyDragDropContext = (props) => {
     const { source, destination } = result;
   
     if (source.droppableId !== destination.droppableId) {
-      const sourceCard = cards[source.droppableId];
-      const destCard = cards[destination.droppableId];
+      const sourceCard = cards.tasks[source.droppableId];
+      const destCard = cards.tasks[destination.droppableId];
       const sourceData = [...sourceCard.data];
       const destData = [...destCard.data];
       const [removed] = sourceData.splice(source.index, 1);
@@ -28,26 +28,32 @@ const MyDragDropContext = (props) => {
 
       setCards({
         ...cards,
-        [source.droppableId]: {
-          ...sourceCard,
-          data: sourceData
-        },
-        [destination.droppableId]: {
-          ...destCard,
-          data: destData
+        tasks: {
+          ...cards.tasks,
+          [source.droppableId]: {
+            ...sourceCard,
+            data: sourceData
+          },
+          [destination.droppableId]: {
+            ...destCard,
+            data: destData
+          }
         }
       });
     } else {
-      const card = cards[source.droppableId];
+      const card = cards.tasks[source.droppableId];
       const copiedData = [...card.data];
       const [removed] = copiedData.splice(source.index, 1);
       copiedData.splice(destination.index, 0, removed);
   
       setCards({
         ...cards,
-        [source.droppableId]: {
-          ...card,
-          data: copiedData
+        tasks: {
+          ...cards.tasks,
+          [source.droppableId]: {
+            ...card,
+            data: copiedData
+          }
         }
       });
     }

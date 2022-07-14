@@ -196,3 +196,21 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.NewTaskCard_InputBox {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #0079bf;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.NewTaskCard_ButtonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

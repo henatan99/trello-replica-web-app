@@ -3,12 +3,18 @@ import cards from '../../../helpers/seedData';
 import BoardCard from './boardCard';
 import BoardTitleWrapper from './boardTitleWrapper';
 import './index.css';
-import NewListCardForm from './newListCardFrom';
+import { NewListCardAdd, NewListCardCreateForm } from './newListCardFrom';
 import MyDragDropContext from './DragDropContext/dragDropContext';
 
 const BoardMainContainer = () => {
-    const cardsObj = cards.tasks;
-    const [cardState, setCardState] = useState(cardsObj);
+    // const cardsObj = cards.tasks;
+    const [cardState, setCardState] = useState(cards);
+    const [cardAdding, setCardAdding] = useState(false);
+
+    const addTaskHandler = () => {
+
+    }
+
     return (
   
         <div className="board_main_container">
@@ -19,12 +25,21 @@ const BoardMainContainer = () => {
               setCards={setCardState}
             >
                 {
-                    Object.entries(cardState).map(([cardId, card], index) => {
-                        return <BoardCard card={card} key={cardId} cardId={cardId} index={index} />
+                    Object.entries(cardState.tasks).map(([cardId, card], index) => {
+                        return <BoardCard card={card} key={cardId} cardId={cardId} index={index} cardState={cardState} setCardState={setCardState}/>
                     })
                 }
             </MyDragDropContext>
-            <NewListCardForm />
+            {
+              cardAdding ? 
+              <NewListCardCreateForm  
+                cardAddFormRemove={() => setCardAdding(false)}
+                cardState={cardState}
+                setCardState={setCardState}
+                name='card'
+              /> :
+              <NewListCardAdd cardAddingHandler={() => setCardAdding(true)} name='card' />
+            }
           </div>
         </div>
       );

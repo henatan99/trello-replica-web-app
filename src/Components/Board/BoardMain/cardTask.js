@@ -52,17 +52,6 @@ const CardTask = (props) => {
                                 provided.draggableProps.style
                             )
                         }
-                        // style={{
-                        //     userSelect: "none",
-                        //     padding: 16,
-                        //     margin: "0 0 8px 0",
-                        //     minHeight: "50px",
-                        //     backgroundColor: snapshot.isDragging
-                        //       ? "#263B4A"
-                        //       : "#456C86",
-                        //     color: "white",
-                        //     ...provided.draggableProps.style
-                        //   }}
                     >
                         <div className="task_card_main_content">
                             <div className="task_card_task_label_wrapper" title="" ></div>

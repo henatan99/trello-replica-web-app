@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import CardTask from "./cardTask";
 import { Droppable } from "react-beautiful-dnd";
+import { NewTaskAdd, NewTaskCreateForm } from "./newListCardFrom";
 
 const BoardCard = (props) => {
-    const { cardId, index, card } = props;
+    const { cardId, index, card, cardState, setCardState } = props;
     const { data, title } = card;
+    const [taskAdding, setTaskAdding] = useState(false);
 
     return (
         <div className="list_card_main_container">
@@ -21,14 +23,6 @@ const BoardCard = (props) => {
                     className="list_card_task_list_wrapper" 
                     {...provided.droppableProps}
                     ref={provided.innerRef}
-                    // style={{
-                    //     background: snapshot.isDraggingOver
-                    //       ? "lightblue"
-                    //       : "lightgrey",
-                    //     padding: 4,
-                    //     width: 250,
-                    //     minHeight: 500
-                    //   }}
                     >
                         {
                             data && data.length > 0 &&  data.map((task, index) => {
@@ -42,15 +36,19 @@ const BoardCard = (props) => {
                     </div>
                 )}
             </Droppable>
-
-            <div>
-                <div className=" ">
-                    <div className="newTaskCard_AddMoreWrapper">
-                        <span className="material_icons"></span>
-                        Add a card
-                    </div>
-                </div>
-            </div>
+            
+            { 
+                taskAdding ?  
+                <NewTaskCreateForm
+                    taskAddFormRemove={() => setTaskAdding(false)} 
+                    cardState={cardState} 
+                    setCardState={setCardState}
+                    cardId={cardId}
+                />
+                :
+                <NewTaskAdd taskAddingHandler={() => setTaskAdding(true)} />
+            }
+            
         </div>
     )
 }

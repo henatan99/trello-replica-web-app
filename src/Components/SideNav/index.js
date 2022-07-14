@@ -6,11 +6,11 @@ const SideNav = () => {
 
   return (
     <nav className="sidebar_wrapper">
-      <button className="button_buttonwrapper button_white">
-        <img className="button_icon" src="images/user-blue.022f390c.png" />
+      <button className="button_buttonwrapper button_white" type="button">
+        <img className="button_icon" src="images/user-blue.022f390c.png" alt="user-blue" />
       </button>
-      <button className="button_buttonwrapper button_transparent">
-        <img className="button_icon" src={expandIcon} />
+      <button className="button_buttonwrapper button_transparent" type="button">
+        <img className="button_icon" src={expandIcon} alt="expand" />
       </button>
     </nav>
   );

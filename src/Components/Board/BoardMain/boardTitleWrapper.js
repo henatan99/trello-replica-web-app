@@ -10,8 +10,8 @@ const BoardTitleWrapper = () => (
       <span className="material_icons"></span>
     </div>
     <div className="board_separator" />
-    <button className="button_buttonwrapper button_secondary">
-      <img className="button_icon" src="images/earth_white.b0d834ac.svg" />
+    <button className="button_buttonwrapper button_secondary" type="button">
+      <img className="button_icon" src="images/earth_white.b0d834ac.svg" alt="earth_white" />
       <span className="button_label">
         Public
       </span>

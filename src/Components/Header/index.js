@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <header className="topbar">
       <div className="topbar_leftmenu">
-        <button className="button_buttonwrapper">
-          <img className="button_icon" src="images/apps_white.2aa687f0.svg" />
+        <button className="button_buttonwrapper" type="button">
+          <img className="button_icon" src="images/apps_white.2aa687f0.svg" alt="apps_white" />
         </button>
         <div className="topbar_menuitem">
           <p className="topbar_logo" />
@@ -29,7 +29,7 @@ const Header = () => {
           <span>Templates</span>
           <img className="topbar_arrowdown" src={downArrow} alt="Caret Down" />
         </div>
-        <button className="button_buttonwrapper button_darkbutton">
+        <button className="button_buttonwrapper button_darkbutton" type="button">
           <span className="button_label">Create</span>
         </button>
       </div>
@@ -38,11 +38,11 @@ const Header = () => {
           <input className="topbar_searchinput" type="search" placeholder="Search" />
           <span className="material_icons"></span>
         </div>
-        <button className="button_buttonwrapper ">
-          <img className="button_icon" src="/images/info.23e92631.png" />
+        <button className="button_buttonwrapper" type="button">
+          <img className="button_icon" src="/images/info.23e92631.png" alt="info" />
         </button>
-        <button className="button_buttonwrapper ">
-          <img className="button_icon" src="/images/notification.c7957132.png" />
+        <button className="button_buttonwrapper" type="button">
+          <img className="button_icon" src="/images/notification.c7957132.png" alt="notification" />
         </button>
         <span className="user_avatar_default">QK</span>
       </div>

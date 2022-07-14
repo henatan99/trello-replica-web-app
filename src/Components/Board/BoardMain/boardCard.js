@@ -3,9 +3,8 @@ import CardTask from "./cardTask";
 import { Droppable } from "react-beautiful-dnd";
 
 const BoardCard = (props) => {
-    const { card } = props;
-    const { idx, data, title } = card;
-    const cardIndex = idx;
+    const { cardId, index, card } = props;
+    const { data, title } = card;
 
     return (
         <div className="list_card_main_container">
@@ -16,7 +15,7 @@ const BoardCard = (props) => {
                 <span className="material_icons"></span>
             </div>
 
-            <Droppable droppableId={`${cardIndex}`} key={cardIndex}>
+            <Droppable droppableId={cardId} key={cardId}>
                 {(provided, snapshot) => (
                     <div 
                     className="list_card_task_list_wrapper" 
@@ -32,10 +31,10 @@ const BoardCard = (props) => {
                     //   }}
                     >
                         {
-                            data && data.length > 0 &&  data.map((task) => {
+                            data && data.length > 0 &&  data.map((task, index) => {
                                 const { idx } = task;
                                 return(
-                                    <CardTask key={idx} cardIndex={cardIndex} taskIndex={idx} task={task} />
+                                    <CardTask key={idx} cardIndex={cardId} taskIndex={idx} index={index} task={task} />
                                 )
                             })
                         }

@@ -25,23 +25,23 @@ const CardTask = (props) => {
     const {
         cardIndex,
         taskIndex, 
+        index,
         task
     } = props;
 
-    const { message, title } = task;
+    const { message } = task;
 
     console.log('card task props', props);
     return (
         <Draggable
             key={`${cardIndex}_${taskIndex}_${hashString(message)}`}
             draggableId={`${cardIndex}_${taskIndex}_${hashString(message)}`}
-            index={taskIndex}
+            index={index}
             >
             {
                 (provided, snapshot) => (
                     <div 
                         className="list_card_task_card_wrapper" 
-                        // tabIndex="0" 
                         role="button" 
                         ref={provided.innerRef}
                         {...provided.draggableProps}
@@ -65,7 +65,7 @@ const CardTask = (props) => {
                         //   }}
                     >
                         <div className="task_card_main_content">
-                            <div className="task_card_task_label_wrapper" title={title} ></div>
+                            <div className="task_card_task_label_wrapper" title="" ></div>
                             <h3 className="task_card_message">
                                 {message}
                             </h3>

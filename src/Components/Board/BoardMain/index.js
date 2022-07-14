@@ -7,9 +7,8 @@ import NewListCardForm from './newListCardFrom';
 import MyDragDropContext from './DragDropContext/dragDropContext';
 
 const BoardMainContainer = () => {
-    console.log('cards', cards);
-    const [cardState, setCardState] = useState(cards);
-    // const [columns, setColumns] = useState(columnsFromBackend);
+    const cardsObj = cards.tasks;
+    const [cardState, setCardState] = useState(cardsObj);
     return (
   
         <div className="board_main_container">
@@ -20,9 +19,8 @@ const BoardMainContainer = () => {
               setCards={setCardState}
             >
                 {
-                    cardState && cardState.length > 0 && cardState.map((card, index) => {
-                        const { idx } = card;
-                        return <BoardCard card={card} key={idx} index={index} />
+                    Object.entries(cardState).map(([cardId, card], index) => {
+                        return <BoardCard card={card} key={cardId} cardId={cardId} index={index} />
                     })
                 }
             </MyDragDropContext>

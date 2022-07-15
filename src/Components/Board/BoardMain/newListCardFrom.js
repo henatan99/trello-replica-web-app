@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const NewListCardAdd = (props) => {
   const { cardAddingHandler } = props;
   return (
-    <div className="newListCard_NewListWrapper" onClick={cardAddingHandler} onKeyDown={() => null}>
+    <div className="newListCard_NewListWrapper" onClick={cardAddingHandler} onKeyPress={() => null} role="button" tabIndex="0">
       <div className="newListCard_AddMoreWrapper">
         <span className="material_icons"></span>
         Add another list
@@ -26,7 +26,7 @@ export const NewTaskAdd = (props) => {
   return (
     <div>
       <div className=" ">
-        <div className="newTaskCard_AddMoreWrapper" onClick={taskAddingHandler}>
+        <div className="newTaskCard_AddMoreWrapper" onClick={taskAddingHandler} onKeyPress={() => null} role="button" tabIndex="0">
           <span className="material_icons"></span>
           Add a card
         </div>
@@ -71,7 +71,7 @@ export const NewListCardCreateForm = (props) => {
             <button className="button_buttonwrapper button_primary" type="submit">
               <span className="button_label">Add list</span>
             </button>
-            <span className="material_icons" onClick={cardAddFormRemove}></span>
+            <span className="material_icons" onClick={cardAddFormRemove} onKeyPress={() => null} role="button" tabIndex="0"></span>
           </div>
         </form>
       </div>
@@ -133,7 +133,7 @@ export const NewTaskCreateForm = (props) => {
               <button className="button_buttonwrapper button_primary" type="submit">
                 <span className="button_label">Add card</span>
               </button>
-              <span className="material_icons" onClick={taskAddFormRemove}></span>
+              <span className="material_icons" onClick={taskAddFormRemove} onKeyPress={() => null} role="button" tabIndex="0"></span>
             </div>
           </form>
         </div>

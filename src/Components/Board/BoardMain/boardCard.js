@@ -21,9 +21,10 @@ const BoardCard = (props) => {
       </div>
 
       <Droppable droppableId={cardId} key={cardId}>
-        {(provided, snapshot) => (
+        {(provided /* , snapshot */) => (
           <div
             className="list_card_task_list_wrapper"
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...provided.droppableProps}
             ref={provided.innerRef}
           >

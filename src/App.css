@@ -24,6 +24,7 @@
 }
 
 .button_primary {
+  /* stylelint-disable-next-line */
   width: -webkit-max-content;
   width: max-content;
   color: #fff;
@@ -32,15 +33,16 @@
 }
 
 .button_secondary {
+  /* stylelint-disable-next-line */
   width: -webkit-max-content;
   width: max-content;
   color: #fff;
-  background-color: hsla(0,0%,100%,.3);
+  background-color: hsla(0, 0%, 100%, 0.3);
   padding: 0 12px;
 }
 
 .button_secondary .button_icon {
-  top: 0;
+  /* top: 0; */
   width: 16px;
   height: 16px;
   top: 1px;
@@ -51,7 +53,7 @@
 }
 
 .material_icons {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

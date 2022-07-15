@@ -1,3 +1,82 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.button_buttonwrapper {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.button_icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+  padding-right: 8px;
+}
+
+.button_primary {
+  /* stylelint-disable-next-line */
+  width: -webkit-max-content;
+  width: max-content;
+  color: #fff;
+  background-color: #0079bf;
+  padding: 0 12px;
+}
+
+.button_secondary {
+  /* stylelint-disable-next-line */
+  width: -webkit-max-content;
+  width: max-content;
+  color: #fff;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  padding: 0 12px;
+}
+
+.button_secondary .button_icon {
+  /* top: 0; */
+  width: 16px;
+  height: 16px;
+  top: 1px;
+}
+
+.button_label {
+  font-size: 14px;
+}
+
+.material_icons {
+  font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.user_avatar_default {
+  color: #172b4d;
+  background-color: #dfe1e6;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-left: 4px;
 }

@@ -13,7 +13,10 @@ const BoardMainContainer = () => {
   useEffect(() => {
     const cardsStorage = JSON.parse(localStorage.getItem('cards'));
     const cardsObj = cardsStorage && {
-      ...cardState, tasks: cardsStorage.tasks, lastTask: cardsStorage.lastTask, lastCard: cardsStorage.lastCard,
+      ...cardState,
+      tasks: cardsStorage.tasks,
+      lastTask: cardsStorage.lastTask,
+      lastCard: cardsStorage.lastCard,
     };
     if (cardsObj) {
       setCardState(cardsObj);

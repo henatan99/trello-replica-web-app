@@ -9,6 +9,8 @@ const MyDragDropContext = (props) => {
     children,
   } = props;
 
+  console.log('cards', cards);
+
   const onDragEnd = (result, cards, setCards) => {
     if (!result.destination) return;
     const { source, destination } = result;

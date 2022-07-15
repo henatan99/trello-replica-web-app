@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cards from '../../../helpers/seedData';
 import BoardCard from './boardCard';
 import BoardTitleWrapper from './boardTitleWrapper';
@@ -10,6 +10,23 @@ const BoardMainContainer = () => {
   const [cardState, setCardState] = useState(cards);
   const [cardAdding, setCardAdding] = useState(false);
 
+  useEffect(() => {
+    const cardsStorage = JSON.parse(localStorage.getItem('cards'));
+    const cardsObj = cardsStorage && {
+      ...cardState, tasks: cardsStorage.tasks, lastTask: cardsStorage.lastTask, lastCard: cardsStorage.lastCard,
+    };
+    if (cardsObj) {
+      setCardState(cardsObj);
+    } else {
+      setCardState(cards);
+    }
+  }, []);
+
+  // add cardState object to localStorage whenever the value of our state changed
+  useEffect(() => {
+    localStorage.setItem('cards', JSON.stringify(cardState));
+  }, [cardState]);
+
   return (
 
     <div className="board_main_container">
@@ -20,16 +37,16 @@ const BoardMainContainer = () => {
           setCards={setCardState}
         >
           {
-                    Object.entries(cardState.tasks).map(([cardId, card], index) => (
-                      <BoardCard
-                        card={card}
-                        key={cardId}
-                        cardId={cardId}
-                        index={index}
-                        cardState={cardState}
-                        setCardState={setCardState}
-                      />
-                    ))
+                   Object.entries(cardState.tasks).map(([cardId, card], index) => (
+                     <BoardCard
+                       card={card}
+                       key={cardId}
+                       cardId={cardId}
+                       index={index}
+                       cardState={cardState}
+                       setCardState={setCardState}
+                     />
+                   ))
                 }
         </MyDragDropContext>
         {

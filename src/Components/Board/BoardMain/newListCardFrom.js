@@ -164,5 +164,5 @@ NewTaskCreateForm.propTypes = {
     addTask: PropTypes.func,
   }),
   setCardState: PropTypes.func,
-  cardId: PropTypes.number,
+  cardId: PropTypes.string,
 };

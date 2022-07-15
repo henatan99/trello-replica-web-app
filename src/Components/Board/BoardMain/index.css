@@ -9,6 +9,10 @@
     overflow: auto;
 }
 
+.board_title_wrapper .button_secondary:hover {
+    background-color: #57aed9; 
+}
+
 .board_title {
     font-size: 18px;
     font-weight: 700;
@@ -31,6 +35,12 @@
 .board_star_wrapper > span {
     padding: 8px 7px;
     font-size: 18px;
+}
+
+.board_star_wrapper:hover > span {
+    padding: 6px 5px;
+    font-size: 22px;
+    color: #ffda00;
 }
 
 .board_separator {
@@ -120,6 +130,10 @@
     margin-bottom: 8px;
 }
 
+.task_card_main_content:hover {
+    background-color: #f4f5f7;
+}
+
 .task_card_task_label_wrapper {
     background-color: #eb5a46;
     width: 40px;
@@ -158,6 +172,10 @@
     cursor: pointer;
 }
 
+.newTaskCard_AddMoreWrapper:hover {
+    background-color: #dadbe2;
+}
+
 .newListCard_NewListWrapper {
     min-width: 272px;
     width: 272px;
@@ -165,6 +183,10 @@
     margin: 0 4px;
     border-radius: 3px;
     padding: 10px 8px 8px;
+}
+
+.newListCard_NewListWrapper:hover {
+    background-color: #57aed9;
 }
 
 .newListCard_AddMoreWrapper {
@@ -218,4 +240,28 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+
+
+[data-rbd-drag-handle-context-id="0"] {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+}
+
+/* scrollable bar */
+
+.board_list_wrapper::-webkit-scrollbar {
+    width: 1em;
+    height: 12px;
+}
+
+.board_list_wrapper::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.4);
+    border-radius: 4px;
+}
+
+.board_list_wrapper::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,.15);
 }

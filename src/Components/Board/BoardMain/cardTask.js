@@ -54,12 +54,14 @@ const CardTask = (props) => {
                   >
                     <div className="task_card_main_content">
                       {
-                        title && (title === 'CP' || title === 'Fault') && 
-                        <div 
-                            className="task_card_task_label_wrapper" 
-                            style={title === 'CP' ? {backgroundColor: `rgb(0, 121, 191)`} : null} 
-                            title={title} 
+                        title && (title === 'CP' || title === 'Fault')
+                        && (
+                        <div
+                          className="task_card_task_label_wrapper"
+                          style={title === 'CP' ? { backgroundColor: 'rgb(0, 121, 191)' } : null}
+                          title={title}
                         />
+                        )
                       }
                       <h3 className="task_card_message">
                         {message}
@@ -80,7 +82,7 @@ CardTask.defaultProps = {
 };
 
 CardTask.propTypes = {
-  cardIndex: PropTypes.number,
+  cardIndex: PropTypes.string,
   taskIndex: PropTypes.number,
   index: PropTypes.number,
   task: PropTypes.shape({

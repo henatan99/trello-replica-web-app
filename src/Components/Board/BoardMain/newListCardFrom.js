@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const NewListCardAdd = (props) => {
   const { cardAddingHandler } = props;
   return (
-    <div className="newListCard_NewListWrapper" onClick={cardAddingHandler} onKeyDown="">
+    <div className="newListCard_NewListWrapper" onClick={cardAddingHandler} onKeyDown={() => null}>
       <div className="newListCard_AddMoreWrapper">
         <span className="material_icons"></span>
         Add another list

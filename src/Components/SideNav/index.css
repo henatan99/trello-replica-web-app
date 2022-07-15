@@ -20,6 +20,11 @@
     cursor: pointer;
 }
 
+.sidebar_wrapper:hover {
+    background-color: #fff;
+    background-image: none;
+}
+
 .button_transparent {
     background-color: transparent;
     margin-top: 8px;

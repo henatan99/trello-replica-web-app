@@ -40,6 +40,12 @@
     align-items: center;
 }
 
+.topbar_menuitem:hover, 
+.button_darkbutton:hover, 
+.topbar .button_buttonwrapper:hover {
+    background-color: hsla(0,0%,100%,.3);
+}
+
 .topbar_menuitem:first-of-type {
     padding: 0 8px;
 }
@@ -95,8 +101,13 @@
     outline: none;
 }
 
-input[type="search" i] {
+/* input[type="search" i] {
     appearance: auto;
     box-sizing: border-box;
     padding: 1px 2px;
+} */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
 }

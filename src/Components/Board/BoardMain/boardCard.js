@@ -71,7 +71,7 @@ BoardCard.defaultProps = {
 };
 
 BoardCard.propTypes = {
-  cardId: PropTypes.number,
+  cardId: PropTypes.string,
   card: PropTypes.shape({
     title: PropTypes.string.isRequired,
     data: PropTypes.instanceOf(Array),

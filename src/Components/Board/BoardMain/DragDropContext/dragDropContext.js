@@ -81,7 +81,7 @@ MyDragDropContext.propTypes = {
     addTask: PropTypes.func,
   }),
   setCards: PropTypes.func,
-  children: PropTypes.instanceOf(Element),
+  children: PropTypes.instanceOf(Array),
 };
 
 export default MyDragDropContext;

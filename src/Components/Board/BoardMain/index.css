@@ -128,10 +128,6 @@
   white-space: nowrap;
 }
 
-{
-  margin-bottom: 0;
-}
-
 .task_card_message {
   margin: 0 0 4px;
   overflow: hidden;

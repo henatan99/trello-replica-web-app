@@ -28,6 +28,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Install dependancies 
 `npm install`
 
+In case there is dependencies conflict use the legacy-peer-deps flag
+`npm install --legacy-peer-deps`
+
 - And follow the App Usage instructions in the next section
 
 ## Available Scripts for App Usage

@@ -10,6 +10,8 @@ There are no API requests instead data is persisited in local storage.
 
 ![Screenshot](docs/trello.gif)
 
+[Live Link](https://trello-replica-hen.herokuapp.com/)
+
 ## Built With
 
 - `React` | `React-DOM` | `React-Create-App` 
